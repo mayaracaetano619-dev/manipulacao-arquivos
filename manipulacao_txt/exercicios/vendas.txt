@@ -1,0 +1,5 @@
+Ana;Notebook;3500
+Bruno;Mouse;100
+Ana;Teclado;200
+Carlos;Monitor;1200
+Bruno;Notebook;3500

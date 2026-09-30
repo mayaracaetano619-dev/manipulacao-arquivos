@@ -11,17 +11,16 @@ def sistema_alunos():
                 'idade': int(idade),
                 'curso': curso
             }
-
             alunos.append(aluno)
 
     while True:
-        print('\n===== SISTEMA DE ALUNOS =====')
+        print('=======Sistema de Alunos=======')
         print('1 - Listar alunos')
         print('2 - Buscar aluno')
         print('3 - Cadastrar aluno')
         print('4 - Remover aluno')
         print('5 - Alterar aluno')
-        print('6 - Sair')
+        print('0 - Sair')
 
         opcao = input('Escolha: ')
 
@@ -32,12 +31,9 @@ def sistema_alunos():
                     f"{aluno['nome']} - "
                     f"{aluno['idade']} anos"
                 )
-
         elif opcao == '2':
             id_buscar = int(input('Digite o ID: '))
-
             encontrado = False
-
             for aluno in alunos:
                 if aluno['id'] == id_buscar:
                     print('Aluno encontrado:')
@@ -46,10 +42,8 @@ def sistema_alunos():
                     print(aluno['curso'])
 
                     encontrado = True
-
             if encontrado == False:
                 print('Aluno não encontrado!')
-
         elif opcao == '3':
             id = int(input('ID: '))
             nome = input('Nome: ')
@@ -62,9 +56,7 @@ def sistema_alunos():
                 'idade': idade,
                 'curso': curso
             }
-
             alunos.append(aluno)
-
             with open('alunos.txt', 'w', encoding='utf-8') as arquivo:
                 for aluno in alunos:
                     arquivo.write(
@@ -73,19 +65,14 @@ def sistema_alunos():
                         f"{aluno['idade']};"
                         f"{aluno['curso']}\n"
                     )
-
             print('Aluno cadastrado com sucesso!')
-
         elif opcao == '4':
             id_remover = int(input('Digite o ID: '))
-
             encontrado = False
-
             for aluno in alunos:
                 if aluno['id'] == id_remover:
                     alunos.remove(aluno)
                     encontrado = True
-
             if encontrado == True:
                 with open('alunos.txt', 'w', encoding='utf-8') as arquivo:
                     for aluno in alunos:
@@ -95,24 +82,18 @@ def sistema_alunos():
                             f"{aluno['idade']};"
                             f"{aluno['curso']}\n"
                         )
-
                 print('Aluno removido com sucesso!')
             else:
                 print('Aluno não encontrado!')
-
         elif opcao == '5':
             id_alterar = int(input('Digite o ID: '))
-
             encontrado = False
-
             for aluno in alunos:
                 if aluno['id'] == id_alterar:
                     aluno['nome'] = input('Novo nome: ')
                     aluno['idade'] = int(input('Nova idade: '))
                     aluno['curso'] = input('Novo curso: ')
-
                     encontrado = True
-
             if encontrado == True:
                 with open('alunos.txt', 'w', encoding='utf-8') as arquivo:
                     for aluno in alunos:
@@ -122,15 +103,12 @@ def sistema_alunos():
                             f"{aluno['idade']};"
                             f"{aluno['curso']}\n"
                         )
-
                 print('Aluno alterado com sucesso!')
             else:
                 print('Aluno não encontrado!')
-
-        elif opcao == '6':
+        elif opcao == '0':
             print('Programa encerrado.')
             break
-
         else:
             print('Opção inválida!')
 

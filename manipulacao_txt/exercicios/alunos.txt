@@ -1,7 +1,5 @@
-Ana;8.5
-Bruno;5.0
-Carlos;7.2
-Daniela;9.0
-Eduardo;4.5
-Fernanda;6.8
-Gabriel;5.9
+1;Ana Silva;17;Desenvolvimento de Sistemas
+2;Bruno Souza;18;Desenvolvimento de Sistemas
+3;Carlos Oliveira;17;Desenvolvimento de Sistemas
+4;Daniela Santos;18;Desenvolvimento de Sistemas
+5;Eduardo Lima;17;Desenvolvimento de Sistemas

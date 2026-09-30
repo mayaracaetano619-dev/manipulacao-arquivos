@@ -14,7 +14,8 @@ def gerenciar_tarefas():
             tarefas.append(linha.strip())
 
     while True:
-        print('\n1 - Adicionar tarefa')
+        print('=======Lista de Tarefas=======')
+        print('1 - Adicionar tarefa')
         print('2 - Listar tarefas')
         print('3 - Remover tarefa')
         print('0 - Sair')
