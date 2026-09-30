@@ -14,7 +14,7 @@ def contar_linhas():
     with open("nomes.txt", "r", encoding='utf-8') as arquivo:
         for linha in arquivo:
             quantidade += 1
-    print("O arquivo possui", quantidade, "linhas.")
+    print(f"O arquivo possui {quantidade} linhas.")
 
 
 contar_linhas()

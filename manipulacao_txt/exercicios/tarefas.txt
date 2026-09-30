@@ -1,0 +1,4 @@
+Estudar Python
+Fazer exercícios
+Estudar banco de dados
+Preparar aula
