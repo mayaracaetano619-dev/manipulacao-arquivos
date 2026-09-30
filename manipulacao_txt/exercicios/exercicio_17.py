@@ -9,7 +9,6 @@ def calcular_estoque():
                 'quantidade': int(quantidade)
             }
             produtos.append(produto)
-
     valor_total = 0
     for produto in produtos:
         valor = produto['preco'] * produto['quantidade']

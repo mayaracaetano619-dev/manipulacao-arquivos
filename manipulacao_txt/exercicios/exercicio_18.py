@@ -1,6 +1,5 @@
 def gerenciar_notas():
     alunos = []
-
     with open('notas.txt', 'r', encoding='utf-8') as arquivo:
         for linha in arquivo:
             nome, nota1, nota2, nota3 = linha.strip().split(';')

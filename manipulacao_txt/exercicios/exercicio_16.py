@@ -25,7 +25,6 @@ def buscar_produto():
             print(f"Quantidade: {produto['quantidade']}")
 
             encontrado = True
-
     if encontrado == False:
         print('Produto não encontrado!')
 

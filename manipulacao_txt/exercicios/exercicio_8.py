@@ -5,7 +5,6 @@ def criar_arquivo():
         arquivo.write('Python também é muito utilizada em ciência de dados.\n')
 
 criar_arquivo()
-
 def contar_palavras():
     with open("texto.txt", "r", encoding='utf-8') as arquivo:
         texto = arquivo.read()

@@ -12,7 +12,6 @@ def criar_arquivo():
         arquivo.write('91\n')
 
 criar_arquivo()
-
 def mostrar_numeros():
     numeros = []
     with open("numeros.txt", "r", encoding='utf-8') as arquivo:

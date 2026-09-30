@@ -65,6 +65,7 @@ def sistema_alunos():
                         f"{aluno['idade']};"
                         f"{aluno['curso']}\n"
                     )
+
             print('Aluno cadastrado com sucesso!')
         elif opcao == '4':
             id_remover = int(input('Digite o ID: '))

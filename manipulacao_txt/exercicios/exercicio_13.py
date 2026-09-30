@@ -39,7 +39,6 @@ def menu_arquivo():
         elif opcao == '0':
             print('Programa encerrado.')
             break
-
         else:
             print('Opção inválida!')
 

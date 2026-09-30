@@ -9,7 +9,6 @@ def criar_arquivo():
         arquivo.write('Gabriel;5.9\n')
 
 criar_arquivo()
-
 def listar_aprovados():
     with open('alunos.txt', 'r', encoding='utf-8') as arquivo:
         for linha in arquivo:

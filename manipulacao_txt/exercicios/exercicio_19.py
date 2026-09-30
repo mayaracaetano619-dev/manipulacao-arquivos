@@ -5,6 +5,7 @@ def criar_arquivo():
             arquivo.write('Ana;Teclado;200\n')
             arquivo.write('Carlos;Monitor;1200\n')
             arquivo.write('Bruno;Notebook;3500\n')
+
 criar_arquivo()
 
 def gerar_relatorio():

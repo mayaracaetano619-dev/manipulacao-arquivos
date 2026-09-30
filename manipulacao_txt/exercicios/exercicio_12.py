@@ -16,7 +16,6 @@ def classificar_alunos():
             situacao = 'Recuperação'
         else:
             situacao = 'Reprovado'
-
         print(f"{aluno['nome']} - {aluno['nota']} - {situacao}")
 
 

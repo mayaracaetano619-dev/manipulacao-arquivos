@@ -7,7 +7,6 @@ def criar_arquivo():
         arquivo.write('Webcam;210.00;4\n')
 
 criar_arquivo()
-
 def cadastrar_produtos():
     produtos = []
 

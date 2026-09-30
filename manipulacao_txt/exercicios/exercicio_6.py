@@ -6,4 +6,5 @@ def carregar_nomes():
             nomes.append(nome)
     print(nomes)
 
+
 carregar_nomes()

@@ -37,7 +37,6 @@ def gerenciar_tarefas():
 
         elif opcao == '3':
             tarefa = input('Digite a tarefa que deseja remover: ')
-
             if tarefa in tarefas:
                 tarefas.remove(tarefa)
 

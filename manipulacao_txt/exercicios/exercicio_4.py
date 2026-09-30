@@ -7,7 +7,7 @@ def criar_arquivo():
         arquivo.write('Eduardo\n')
         arquivo.write('Fernando\n')
         arquivo.write('Gabriel\n')
-#criar_arquivo()
+criar_arquivo()
 
 def contar_linhas():
     quantidade = 0

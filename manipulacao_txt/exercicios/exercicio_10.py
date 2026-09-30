@@ -11,4 +11,5 @@ def separar_numeros():
     print(f"Números pares: {pares}")
     print(f"Números ímpares: {impares}")
 
+
 separar_numeros()
