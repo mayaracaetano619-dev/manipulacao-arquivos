@@ -34,7 +34,6 @@ def ler_csv():
         leitor = csv.reader(arquivo)
 
         next(leitor)
-
         for linha in leitor:
             print(linha[0])
 
