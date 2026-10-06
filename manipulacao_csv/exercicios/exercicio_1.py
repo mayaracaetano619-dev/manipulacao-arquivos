@@ -1,10 +1,9 @@
 import csv
 
-
 def ler_treinadores():
     with open("treinadores.csv", "r", encoding="utf-8") as arquivo:
-        leitor = csv.DictReader(arquivo)
-        treinadores = list(leitor)
+        leitores = csv.DictReader(arquivo)
+        treinadores = list(leitores)
 
     return treinadores
 
@@ -13,27 +12,26 @@ def menu():
     treinadores = ler_treinadores()
 
     while True:
-        print(f"===== TREINADORES POKÉMON =====")
+        print(f"==== CONSULTA DE TREINADORES ====")
         print(f"1 - Listar todos os treinadores")
-        print(f"2 - Buscar treinador pelo nome")
-        print(f"3 - Listar treinadores de uma região")
-        print(f"4 - Mostrar treinador com maior nível")
-        print(f"5 - Mostrar treinador com menor nível")
+        print(f"2 - Buscar treinador por nome")
+        print(f"3 - Listar treinadores por região")
+        print(f"4 - Treinador com maior nível")
+        print(f"5 - Treinador com menor nível")
         print(f"0 - Sair")
 
-        opcao = input("Escolha uma opção: ")
+        opcao = input(f"Digite uma opção: ")
 
         if opcao == "1":
             for treinador in treinadores:
-                print(f"{treinador['nome']} - {treinador['regiao']} - Nível: {treinador['nivel']}")
+                print(f"Nome: {treinador['nome']} - Região: {treinador['regiao']} - Nível: {treinador['nivel']}")
 
         elif opcao == "2":
-            nome = input("Digite o nome do treinador: ")
-
+            nome = input(f"Digite o nome do treinador: ")
             encontrado = False
 
             for treinador in treinadores:
-                if treinador["nome"].lower() == nome.lower():
+                if treinador["nome"] == nome:
                     print(f"Nome: {treinador['nome']}")
                     print(f"Região: {treinador['regiao']}")
                     print(f"Nível: {treinador['nivel']}")
@@ -43,13 +41,12 @@ def menu():
                 print(f"Treinador não encontrado.")
 
         elif opcao == "3":
-            regiao = input("Digite a região: ")
-
+            regiao = input(f"Digite a região: ")
             encontrado = False
 
             for treinador in treinadores:
-                if treinador["regiao"].lower() == regiao.lower():
-                    print(f"{treinador['nome']} - Nível: {treinador['nivel']}")
+                if treinador["regiao"] == regiao:
+                    print(f"Nome: {treinador['nome']} - Região: {treinador['regiao']} - Nível: {treinador['nivel']}")
                     encontrado = True
 
             if encontrado == False:
@@ -62,10 +59,7 @@ def menu():
                 if int(treinador["nivel"]) > int(maior["nivel"]):
                     maior = treinador
 
-            print(f"\nTreinador com maior nível:")
-            print(f"Nome: {maior['nome']}")
-            print(f"Região: {maior['regiao']}")
-            print(f"Nível: {maior['nivel']}")
+            print(f"Treinador com maior nível: {maior['nome']} - Nível: {maior['nivel']}")
 
         elif opcao == "5":
             menor = treinadores[0]
@@ -74,10 +68,7 @@ def menu():
                 if int(treinador["nivel"]) < int(menor["nivel"]):
                     menor = treinador
 
-            print(f"\nTreinador com menor nível:")
-            print(f"Nome: {menor['nome']}")
-            print(f"Região: {menor['regiao']}")
-            print(f"Nível: {menor['nivel']}")
+            print(f"Treinador com menor nível: {menor['nome']} - Nível: {menor['nivel']}")
 
         elif opcao == "0":
             print(f"Programa encerrado.")
