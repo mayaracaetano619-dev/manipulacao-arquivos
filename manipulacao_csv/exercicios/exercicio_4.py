@@ -1,21 +1,16 @@
 import csv
 
-
 def ler_treinadores():
     with open("treinadores.csv", "r", encoding="utf-8") as arquivo:
         leitores = csv.DictReader(arquivo)
         treinadores = list(leitores)
-
     return treinadores
-
 
 def ler_pokemons():
     with open("pokemons.csv", "r", encoding="utf-8") as arquivo:
         leitores = csv.DictReader(arquivo)
         pokemons = list(leitores)
-
     return pokemons
-
 
 def ordenar_pokemons(pokemons):
     lista = []
@@ -24,9 +19,7 @@ def ordenar_pokemons(pokemons):
         for pokemon in pokemons:
             if int(pokemon["nivel"]) == nivel:
                 lista.append(pokemon)
-
     return lista
-
 
 def menu():
     treinadores = ler_treinadores()

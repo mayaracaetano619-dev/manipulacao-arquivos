@@ -4,9 +4,7 @@ def ler_treinadores():
     with open("treinadores.csv", "r", encoding="utf-8") as arquivo:
         leitores = csv.DictReader(arquivo)
         treinadores = list(leitores)
-
     return treinadores
-
 
 def menu():
     treinadores = ler_treinadores()

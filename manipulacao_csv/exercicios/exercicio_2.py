@@ -4,17 +4,13 @@ def ler_treinadores():
     with open("treinadores.csv", "r", encoding="utf-8") as arquivo:
         leitores = csv.DictReader(arquivo)
         treinadores = list(leitores)
-
     return treinadores
-
 
 def ler_pokemons():
     with open("pokemons.csv", "r", encoding="utf-8") as arquivo:
         leitores = csv.DictReader(arquivo)
         pokemons = list(leitores)
-
     return pokemons
-
 
 def menu():
     treinadores = ler_treinadores()
